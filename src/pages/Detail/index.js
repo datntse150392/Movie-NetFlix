@@ -31,7 +31,7 @@ export default function Detail() {
               <button className="detail-bottom-btn">Xem Trailer</button>
             </Link>
             <Link to={`/movieFilm/${film.id}`}>
-              <button className="detail-bottom-btn">Xem Phim Ngay</button>
+              <button className="detail-bottom-btn">Xem Phim</button>
             </Link>
           </div>
         </div>

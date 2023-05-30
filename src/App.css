@@ -187,8 +187,11 @@
 }
 
 .detail-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
-  font-size: 13px;
+  font-size: 16px;
   color: #fff;
   border: 1px solid #ffffff;
   width: 600px;
@@ -200,36 +203,35 @@
 }
 
 .detail-bottom-title {
-  padding-top: 0px;
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-nation {
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-year {
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-director {
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-description {
-  padding: 2.8%;
+  padding: 2%;
 }
 
 .detail-bottom-hits {
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-revenue {
-  padding: 2.8%;
+  padding: 2%;
 }
 .detail-bottom-budget {
-  padding: 2.8%;
+  padding: 2%;
 }
 
 .detail-bottom-btn {
   margin: 15px;
   height: 40px;
-  width: 25%;
+  width: 30%;
   border-radius: 5px;
   background-color: red;
   color: #fff;
@@ -425,7 +427,7 @@
 /* End Trailer */
 
 /* Responsive HomePage 100% */
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 566px) {
   .card {
     height: 400px;
     width: 100%;
@@ -448,5 +450,13 @@
   .card-bottom-btn a {
   }
   .card-top img {
+  }
+
+  .detail {
+    height: 350px;
+  }
+
+  .detail-bottom {
+    font-size: 10px;
   }
 }
