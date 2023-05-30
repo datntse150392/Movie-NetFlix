@@ -14,13 +14,16 @@ export default function Header() {
           <Link to="/">Trang chủ</Link>
         </li>
         <li>
-          <Link to="/">Danh sách Phim</Link>
+          <Link to="/film/newFilm">Phim mới nhất</Link>
         </li>
         <li>
           <Link to="/contact">Liên hệ</Link>
         </li>
       </ul> */}
       <div className="action">
+        <Link to="#">
+          <button className="login-btn-contact">Liên hệ</button>
+        </Link>
         <Link to="/login">
           <button className="login-btn">Đăng nhập</button>
         </Link>

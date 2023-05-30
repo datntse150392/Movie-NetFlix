@@ -3,14 +3,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-y: hidden;
   overflow-x: hidden;
   font-family: "Manrope", sans-serif;
 }
 :root {
   background-image: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80);
   background-size: cover;
+  object-fit: cover;
 }
+
+.news {
+  overflow-y: hidden;
+}
+
 /* App */
 .App {
   width: 90%;
@@ -43,6 +48,18 @@
   border-radius: 5px;
   background: rgb(225, 9, 9);
   color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login-btn-contact {
+  margin-right: 10px;
+  border: none;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  color: #f90707;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -110,6 +127,51 @@
   padding-top: 10px;
 }
 
+.container-content {
+  height: 500px;
+  display: flex;
+}
+.container-content-title {
+  margin-top: 8%;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.container-content-subTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.container-content-btn {
+  border: none;
+  height: 40px;
+  width: 260px;
+  border-radius: 5px;
+  justify-self: center;
+  margin-top: 20px;
+  background: rgb(225, 9, 9);
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.container-content-action {
+  display: flex;
+  justify-content: center;
+}
+
+.container-content-btn a {
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+}
 /* Detail Btn */
 .overlay {
   position: fixed;
@@ -175,6 +237,7 @@
 }
 
 .detail-top {
+  overflow-y: hidden;
   width: 500px;
   height: 100%;
   margin-right: 10px;
@@ -204,31 +267,43 @@
 
 .detail-bottom-title {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-nation {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-year {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-director {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-description {
   padding: 2%;
+  overflow-y: hidden;
 }
 
 .detail-bottom-hits {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-revenue {
   padding: 2%;
+  overflow-y: hidden;
 }
 .detail-bottom-budget {
   padding: 2%;
+  overflow-y: hidden;
 }
 
+.detail-bottom-watch {
+  overflow-y: hidden;
+}
 .detail-bottom-btn {
+  overflow-y: hidden;
   margin: 15px;
   height: 40px;
   width: 30%;
@@ -273,6 +348,7 @@
   font-size: 14px;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 
 .footer-top-title {
@@ -420,12 +496,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 600px;
 }
-.container-trailer-film video {
+.container-trailer-film embed {
   width: 80%;
+  height: 100%;
 }
 .trailer-film-title {
+  overflow-y: hidden;
   font-size: 25px;
   color: white;
   padding-bottom: 20px;
@@ -473,3 +551,17 @@
     font-size: 10px;
   }
 }
+
+/* Start News */
+.container-news {
+}
+
+.news {
+  padding: 20px 0px;
+}
+.news-top img {
+  height: 350px;
+  width: 100%;
+  object-fit: fill;
+}
+/* End News */

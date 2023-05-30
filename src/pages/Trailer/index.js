@@ -6,10 +6,14 @@ export default function Trailer() {
   const film = Films.find((obj) => {
     return obj.id == filmId.id;
   });
+  const convertURL = (url) => {
+    return url?.replace("watch?v=", "embed/");
+  };
   return (
     <div className="container-trailer-film">
       <h1 className="trailer-film-title">{film.title} - Official Trailer</h1>
-      <video src={film.trailer} controls />
+      <embed src={convertURL(film.trailer)} />
+      {/* <video src={film.trailer} controls /> */}
     </div>
   );
 }

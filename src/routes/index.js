@@ -2,6 +2,7 @@ import Content from "../pages/Content";
 import Detail from "../pages/Detail";
 import Login from "../pages/Login";
 import MovieFilm from "../pages/MovieFilm";
+import News from "../pages/News";
 import Trailer from "../pages/Trailer";
 // Public routes
 const publicRoutes = [
@@ -26,6 +27,10 @@ const publicRoutes = [
     path: "/film/movieFilm/:id",
     component: MovieFilm,
     layout: null,
+  },
+  {
+    path: "/film/newFilm/",
+    component: News,
   },
 ];
 // Phải đăng nhập mới vào được, còn không sẽ lái vào trang login

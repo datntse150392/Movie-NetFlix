@@ -5,20 +5,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 export default function Content() {
-  const [Film, setFilm] = useState({});
   const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
@@ -26,9 +25,9 @@ export default function Content() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
@@ -41,40 +40,22 @@ export default function Content() {
     ],
   };
   return (
-    <>
-      <Slider {...settings}>
-        {Films.map((film, index) => (
-          <div className="card" key={index}>
-            <div className="card-top">
-              <img src={film.img} alt={film.title} />
-            </div>
-            <div className="card-bottom">
-              <h3 className="card-bottom-title">{film.title}</h3>
-              <button className="card-bottom-btn">
-                <Link to={`/film/detail/${film.id}`}>Chi tiết</Link>
-              </button>
-            </div>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Start Hiện Thông Tin Chi Tiết */}
-      {/* <button className="card-bottom-btn" onClick={() => setFilm(film)}>
-                <a href="#popup1" id="openPopup">
-                  <p style={{ color: "white", fontSize: 14 }}>Chi tiết</p>
-                </a>
-              </button> */}
-      <div id="popup1" className="overlay">
-        <div className="popup">
-          <img src={Film.img} />
-          <h2>{Film.title}</h2>
-          <a className="close" href="#">
-            &times;
-          </a>
-          <div className="content">{Film.des}</div>
+    <Slider>
+      <div className="container-content">
+        <h1 className="container-content-title">
+          Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác
+        </h1>
+        <h3 className="container-content-subTitle">
+          Xem ở mọi nơi. Hủy bất kỳ lúc nào.
+        </h3>
+        <div className="container-content-action">
+          <Link to="/film/newFilm">
+            <button className="container-content-btn">
+              Xem ngay những bộ phim mới nhất
+            </button>
+          </Link>
         </div>
       </div>
-      {/* End Hiện Thông Tin Chi Tiết */}
-    </>
+    </Slider>
   );
 }
