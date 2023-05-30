@@ -557,10 +557,11 @@
 }
 
 .news {
-  padding: 20px 0px;
+  padding: 20px 5px;
 }
 .news-top img {
-  height: 370px;
+  border-radius: 10px;
+  height: 450px;
   width: 100%;
   object-fit: fill;
 }
