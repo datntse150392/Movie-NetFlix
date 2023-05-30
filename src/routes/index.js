@@ -10,7 +10,7 @@ const publicRoutes = [
     component: Content,
   },
   {
-    path: "/detail/:id",
+    path: "/film/detail/:id",
     component: Detail,
   },
   {
@@ -19,11 +19,11 @@ const publicRoutes = [
     layout: null,
   },
   {
-    path: "/trailer/:id",
+    path: "/film/trailer/:id",
     component: Trailer,
   },
   {
-    path: "/movieFilm/:id",
+    path: "/film/movieFilm/:id",
     component: MovieFilm,
     layout: null,
   },

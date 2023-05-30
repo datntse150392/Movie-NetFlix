@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { images } from "../../images";
 
 export default function Login() {
+  const [show, setShow] = useState("false");
+  useEffect(() => {
+    return setShow("false");
+  }, []);
+  const hanlerShow_disclosure = () => {
+    setShow(!show);
+  };
   return (
     <div className="login-container">
       <div className="login">
@@ -41,6 +48,36 @@ export default function Login() {
             Bạn mới tham gia Netflix?
             <a href="#">Đăng kí ngay</a>
           </div>
+          <div className="recaptcha-terms-of-use">
+            <span>
+              Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải
+              là robot.
+            </span>
+            {show && (
+              <button
+                className="recaptcha-terms-of-use--link-button"
+                onClick={hanlerShow_disclosure}
+              >
+                Tìm hiểu thêm
+              </button>
+            )}
+          </div>
+          {!show && (
+            <div className="cha-terms-of-use--disclosure">
+              <span>
+                Thông tin do Google reCAPTCHA thu thập sẽ tuân theo{" "}
+                <a href="https://policies.google.com/privacy" target="_blank">
+                  Chính sách Quyền riêng tư
+                </a>{" "}
+                and{" "}
+                <a href="https://policies.google.com/terms" target="_blank">
+                  Điều khoản dịch vụ
+                </a>{" "}
+                của Google, và được dùng để cung cấp, duy trì và cải thiện dịch
+                vụ reCAPTCHA cũng như các mục đích bảo mật nói chung.
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

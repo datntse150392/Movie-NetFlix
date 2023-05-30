@@ -299,7 +299,7 @@
   display: flex;
   flex-direction: column;
   width: 450px;
-  height: 600px;
+  height: 650px;
   padding: 60px 68px 40px;
   margin: 0px 0px 90px;
   justify-self: center;
@@ -385,6 +385,33 @@
   font-size: 20px;
   color: #fff;
 }
+
+.login-signup-now {
+  margin-bottom: 15px;
+}
+
+.recaptcha-terms-of-use {
+  font-size: 13px;
+}
+
+.recaptcha-terms-of-use--link-button {
+  background-color: transparent;
+  border: none;
+  color: #0071eb;
+  cursor: pointer;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+.cha-terms-of-use--disclosure {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.cha-terms-of-use--disclosure a {
+  font-size: 13px;
+}
 /* End Login */
 
 /* Start Trailer */
@@ -438,20 +465,6 @@
   .card-top {
     height: 70%;
   }
-  .card-bottom {
-  }
-
-  .card-bottom-title {
-  }
-
-  .card-bottom-btn {
-  }
-
-  .card-bottom-btn a {
-  }
-  .card-top img {
-  }
-
   .detail {
     height: 350px;
   }

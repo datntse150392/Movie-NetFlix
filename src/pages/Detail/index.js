@@ -27,10 +27,10 @@ export default function Detail() {
           <p className="detail-bottom-hits">Công chiếu: {film.hits}</p>
           <p className="detail-bottom-revenue">Doanh thu: {film.revenue}</p>
           <div className="detail-bottom-watch">
-            <Link to={`/trailer/${film.id}`}>
+            <Link to={`/film/trailer/${film.id}`}>
               <button className="detail-bottom-btn">Xem Trailer</button>
             </Link>
-            <Link to={`/movieFilm/${film.id}`}>
+            <Link to={`/film/movieFilm/${film.id}`}>
               <button className="detail-bottom-btn">Xem Phim</button>
             </Link>
           </div>

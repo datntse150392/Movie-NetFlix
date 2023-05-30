@@ -51,7 +51,7 @@ export default function Content() {
             <div className="card-bottom">
               <h3 className="card-bottom-title">{film.title}</h3>
               <button className="card-bottom-btn">
-                <Link to={`/detail/${film.id}`}>Chi tiết</Link>
+                <Link to={`/film/detail/${film.id}`}>Chi tiết</Link>
               </button>
             </div>
           </div>
