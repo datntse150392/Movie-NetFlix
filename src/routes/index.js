@@ -3,7 +3,6 @@ import Detail from "../pages/Detail";
 import Login from "../pages/Login";
 import MovieFilm from "../pages/MovieFilm";
 import News from "../pages/News";
-import Trailer from "../pages/Trailer";
 // Public routes
 const publicRoutes = [
   {
@@ -18,10 +17,6 @@ const publicRoutes = [
     path: "/login",
     component: Login,
     layout: null,
-  },
-  {
-    path: "/film/trailer/:id",
-    component: Trailer,
   },
   {
     path: "/film/movieFilm/:id",
