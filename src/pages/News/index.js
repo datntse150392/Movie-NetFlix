@@ -86,57 +86,58 @@ export default function News() {
         </div>
       </div>
       {/* SHOW BILLBOARD */}
-
-      {/* Tổng hợp tất cả bộ phim hiện có */}
-      <h2 style={{ color: "white" }} className="container-news-title">
-        Phổ biến trên Netflix
-      </h2>
-      <Slider {...settings} style={{ overflowY: "hidden" }}>
-        {Films.map((film, index) => (
-          <div className="news" key={index}>
-            <div className="news-top">
-              <Link to={`/film/detail/${film.id}`}>
-                <img src={film.img} alt={film.title} />
-              </Link>
+      <div className="slider-content">
+        {/* Tổng hợp tất cả bộ phim hiện có */}
+        <h2 style={{ color: "white" }} className="container-news-title">
+          Phổ biến trên Netflix
+        </h2>
+        <Slider {...settings} style={{ overflowY: "hidden" }}>
+          {Films.map((film, index) => (
+            <div className="news" key={index}>
+              <div className="news-top">
+                <Link to={`/film/detail/${film.id}`}>
+                  <img src={film.img} alt={film.title} />
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      {/* Tổng hợp tất cả bộ phim hiện có */}
+          ))}
+        </Slider>
+        {/* Tổng hợp tất cả bộ phim hiện có */}
 
-      {/* Tổng hợp tất cả bộ phim thịnh hành*/}
-      <h2 style={{ color: "white" }} className="container-news-title">
-        Hiện đang thịnh hành
-      </h2>
-      <Slider {...settings} style={{ overflowY: "hidden" }}>
-        {listFilm_trending.map((film, index) => (
-          <div className="news" key={index}>
-            <div className="news-top">
-              <Link to={`/film/detail/${film.id}`}>
-                <img src={film.img} alt={film.title} />
-              </Link>
+        {/* Tổng hợp tất cả bộ phim thịnh hành*/}
+        <h2 style={{ color: "white" }} className="container-news-title">
+          Hiện đang thịnh hành
+        </h2>
+        <Slider {...settings} style={{ overflowY: "hidden" }}>
+          {listFilm_trending.map((film, index) => (
+            <div className="news" key={index}>
+              <div className="news-top">
+                <Link to={`/film/detail/${film.id}`}>
+                  <img src={film.img} alt={film.title} />
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      {/* Tổng hợp tất cả bộ phim thịnh hành */}
+          ))}
+        </Slider>
+        {/* Tổng hợp tất cả bộ phim thịnh hành */}
 
-      {/* Tổng hợp tất cả bộ phim Anime*/}
-      <h2 style={{ color: "white" }} className="container-news-title">
-        Phim Anime
-      </h2>
-      <Slider {...settings} style={{ overflowY: "hidden" }}>
-        {listFilm_Ainime.map((film, index) => (
-          <div className="news" key={index}>
-            <div className="news-top">
-              <Link to={`/film/detail/${film.id}`}>
-                <img src={film.img} alt={film.title} />
-              </Link>
+        {/* Tổng hợp tất cả bộ phim Anime*/}
+        <h2 style={{ color: "white" }} className="container-news-title">
+          Phim Anime
+        </h2>
+        <Slider {...settings} style={{ overflowY: "hidden" }}>
+          {listFilm_Ainime.map((film, index) => (
+            <div className="news" key={index}>
+              <div className="news-top">
+                <Link to={`/film/detail/${film.id}`}>
+                  <img src={film.img} alt={film.title} />
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      {/* Tổng hợp tất cả bộ phim Anime */}
+          ))}
+        </Slider>
+        {/* Tổng hợp tất cả bộ phim Anime */}
+      </div>
     </div>
   );
 }

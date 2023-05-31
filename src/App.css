@@ -510,14 +510,24 @@
 .container-news {
 }
 
+.slick-slide > div {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-content {
+  padding-left: 30px;
+}
+
 .news {
-  padding: 20px 0px;
+  width: 215px;
 }
 
 .news-top {
+  margin-left: 5px;
   overflow-y: hidden;
   height: 120px;
-  width: 215px;
+  margin-bottom: 20px;
 }
 .container-news-title {
   color: #e5e5e5;
@@ -526,6 +536,7 @@
   line-height: 18px;
   font-weight: 500;
   vertical-align: bottom;
+  margin-bottom: 10px;
 }
 .news-top img {
   border-radius: 5px;
