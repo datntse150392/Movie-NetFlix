@@ -18,8 +18,6 @@
 
 /* App */
 .App {
-  width: 90%;
-  margin: 0 auto;
 }
 
 .slick-slide > div {
@@ -35,6 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 60px;
 }
 
 .logo img {
@@ -523,7 +522,7 @@
 .container-news-title {
   color: #e5e5e5;
   overflow-y: hidden;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   vertical-align: bottom;
@@ -536,8 +535,8 @@
 
 .billboard-motion {
   height: 800px;
-  width: 1400px;
   position: relative;
+  overflow-y: hidden;
 }
 
 .motion-background img {
@@ -556,7 +555,7 @@
 }
 .info-container {
   width: 40%;
-  top: 40%;
+  top: 45%;
   padding: 10px 50px;
   margin-bottom: 1.2vw;
   min-height: 13.2vw;
