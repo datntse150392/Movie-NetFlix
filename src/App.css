@@ -516,6 +516,7 @@
 }
 
 .news-top {
+  overflow-y: hidden;
   height: 120px;
   width: 215px;
 }
