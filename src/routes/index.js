@@ -9,10 +9,11 @@ const publicRoutes = [
     path: "/",
     component: Content,
   },
-  {
-    path: "/film/detail/:id",
-    component: Detail,
-  },
+  // {
+  //   path: "/film/detail/:id",
+  //   component: Detail,
+  //   layout: null,
+  // },
   {
     path: "/login",
     component: Login,
@@ -26,6 +27,12 @@ const publicRoutes = [
   {
     path: "/film/newFilm/",
     component: News,
+    layout: null,
+  },
+  {
+    path: "/film/newFilm/:id",
+    component: News,
+    layout: null,
   },
 ];
 // Phải đăng nhập mới vào được, còn không sẽ lái vào trang login

@@ -9,14 +9,14 @@ export default function Header() {
           <img src={images.logo} />
         </Link>
       </div>
-      <ul className="nav">
+      {/* <ul className="nav">
         <li>
           <Link to="/">Trang chủ</Link>
         </li>
         <li style={{ fontWeight: "bold" }}>
           <Link to="/film/newFilm">Mới & Phổ biến</Link>
         </li>
-      </ul>
+      </ul> */}
       <div className="action">
         <Link to="/login">
           <button className="login-btn">Đăng nhập</button>
