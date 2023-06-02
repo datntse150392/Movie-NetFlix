@@ -1,0 +1,46 @@
+.container-content {
+  height: 500px;
+  display: flex;
+}
+.container-content-title {
+  margin-top: 8%;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.container-content-subTitle {
+  overflow-y: hidden;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.container-content-btn {
+  border: none;
+  height: 40px;
+  width: 260px;
+  border-radius: 5px;
+  justify-self: center;
+  margin-top: 20px;
+  background: rgb(225, 9, 9);
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.container-content-action {
+  display: flex;
+  justify-content: center;
+}
+
+.container-content-btn a {
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+}

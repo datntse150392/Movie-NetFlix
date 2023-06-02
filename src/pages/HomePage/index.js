@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useParams } from "react-router-dom";
+import { dataBillBoard } from "../../assets/BillBoard";
 import { Films } from "../../assets/Datas/data";
-
 // Madal MUI
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { images } from "../../assets/images";
 
 const style = {
   overflowY: "hidden",
@@ -27,7 +26,14 @@ const style = {
   backgroundColor: "#0000009d",
 };
 // Madal MUI
-export default function News() {
+export default function HomePage() {
+  // transfrom billboard
+  const [transformID, setTranformID] = useState(1);
+  setTimeout(() => {
+    setTranformID(Math.floor(Math.random() * dataBillBoard.length));
+  }, 10000);
+
+  console.log(dataBillBoard[transformID].id);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -115,7 +121,7 @@ export default function News() {
                   <embed src={convertURL(Film_detail.trailerURL)} />
                 </div>
               </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <Typography id="modal-modal-description" sx={{ mt: 0 }}>
                 <div className="container-movie-content">
                   <div className="container-movie-content-right">
                     <h2 className="container-movie-content-right-title">
@@ -150,96 +156,78 @@ export default function News() {
         </div>
       )}
       {/* MADAL */}
-      {/* <div className="header">
-        <div className="logo">
-          <Link to={"/"}>
-            <img src={images.logo} />
-          </Link>
-        </div>
-        <ul className="nav">
-          <li>
-            <Link to="/film/homePage">Trang chủ</Link>
-          </li>
-          <li style={{ fontWeight: "bold" }}>
-            <Link to="/film/newFilm">Mới & Phổ biến</Link>
-          </li>
-        </ul>
-      </div> */}
+
       {/* SHOW BILLBOARD  */}
-      {/* <div className="billboard-motion">
+      <div className="billboard-motion">
         <div className="motion-background">
-          <img src="https://occ-0-325-395.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABRUqohxfdAia6iBSE63rhWPsjtyFTbzcTeu3Up_bDcmwfDdb70KATfGbesYXlYwH-nflHKUyA2yukEJw5f5yWGs8lF79SKUT4R7w.webp?r=4d1" />
+          <img src={dataBillBoard[transformID].imgBG} />
         </div>
         <div className="info-container">
           <div className="billboard-title">
             <img
               alt=""
               class="title-logo "
-              src="https://occ-0-325-395.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTn9tDtVNN5DxSnjtJpoa4APD2F6X5rii3s8-tWSy54SzKebBNWiaVlWtc9U9dsZpDoClc5Ox5NFP-ikHsa7kpotW5qs993scAfygfcZH8MTH5lIbn-nNK2MIYCMI5QshzzBy31_sPJivvL5xVFrzx1as6pXHR_BBHH3cpAiV1-LhdVc7J9a4w.webp?r=41e"
+              src={dataBillBoard[transformID].imgLogo}
               title="Xác ướp"
             />
           </div>
           <div className="info-wrapper">
-            <p>
-              Một cô gái kỳ lạ biến thành mèo để thu hút sự chú ý của người cô
-              thầm thích. Nhưng ranh giới giữa người và động vật bắt đầu bị xóa
-              nhòa trước khi cô kịp nhận ra điều đó.
-            </p>
+            <p>{dataBillBoard[transformID].description}</p>
           </div>
           <div className="action">
-            <Link to="/film/newFilm/11">
+            <Link to="/film/homePage/11">
               <button onClick={handleOpen} className="login-btn">
                 Xem trailer
               </button>
             </Link>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* SHOW BILLBOARD */}
       <div className="slider-content">
-        {/* Mới trên Netflix */}
+        {/* Tổng hợp tất cả bộ phim hiện có */}
         <h2 style={{ color: "white" }} className="container-news-title">
-          Mới trên Netflix
+          Phổ biến trên Netflix
         </h2>
         <Slider {...settings} style={{ overflowY: "hidden" }}>
           {Films.map((film, index) => (
             <div className="news" key={index}>
               <div className="news-top">
-                <Link to={`/film/newFilm/${film.id}`}>
+                <Link to={`/film/homePage/${film.id}`}>
                   <img src={film.img} alt={film.title} onClick={handleOpen} />
                 </Link>
               </div>
             </div>
           ))}
         </Slider>
-        {/* Mới trên Netflix */}
+        {/* Tổng hợp tất cả bộ phim hiện có */}
 
-        {/* Top 10 chương trình truyền hình tại Việt Nam hôm nay*/}
+        {/* Tổng hợp tất cả bộ phim thịnh hành*/}
         <h2 style={{ color: "white" }} className="container-news-title">
-          Top 10 chương trình truyền hình tại Việt Nam hôm nay
+          Hiện đang thịnh hành
         </h2>
         <Slider {...settings} style={{ overflowY: "hidden" }}>
           {listFilm_trending.map((film, index) => (
             <div className="news" key={index}>
               <div className="news-top">
-                <Link to={`/film/newFilm/${film.id}`}>
+                <Link to={`/film/homePage/${film.id}`}>
                   <img src={film.img} alt={film.title} onClick={handleOpen} />
                 </Link>
               </div>
             </div>
           ))}
         </Slider>
-        {/* Top 10 chương trình truyền hình tại Việt Nam hôm nay */}
+        {/* Tổng hợp tất cả bộ phim thịnh hành */}
 
-        {/* Đáng chờ đợi*/}
+        {/* Tổng hợp tất cả bộ phim Anime*/}
         <h2 style={{ color: "white" }} className="container-news-title">
-          Đáng chờ đợi
+          Phim Anime
         </h2>
         <Slider {...settings} style={{ overflowY: "hidden" }}>
           {listFilm_Ainime.map((film, index) => (
             <div className="news" key={index}>
               <div className="news-top">
-                <Link to={`/film/newFilm/${film.id}`}>
+                <Link to={`/film/homePage/${film.id}`}>
                   <img src={film.img} alt={film.title} onClick={handleOpen} />
                 </Link>
               </div>

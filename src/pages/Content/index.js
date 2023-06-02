@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Films } from "../../Datas/data.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-import { images } from "../../images/index.js";
+import styles from "./Content.module.css";
 export default function Content() {
   const settings = {
     dots: true,
@@ -42,16 +41,16 @@ export default function Content() {
   };
   return (
     <Slider {...settings}>
-      <div className="container-content">
-        <h1 className="container-content-title">
+      <div className={styles["container-content"]}>
+        <h1 className={styles["container-content-title"]}>
           Chương trình truyền hình, phim không giới hạn và nhiều nội dung khác
         </h1>
-        <h3 className="container-content-subTitle">
+        <h3 className={styles["container-content-subTitle"]}>
           Xem ở mọi nơi. Hủy bất kỳ lúc nào.
         </h3>
-        <div className="container-content-action">
-          <Link to="/film/newFilm">
-            <button className="container-content-btn">
+        <div className={styles["container-content-action"]}>
+          <Link to="/film/homePage">
+            <button className={styles["container-content-btn"]}>
               Xem ngay những bộ phim mới nhất
             </button>
           </Link>

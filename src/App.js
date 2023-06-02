@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { DefaultLayout } from "./components/Layout";
+import { DefaultLayout, FilmLayout } from "./components/Layout";
 import { publicRoutes } from "./routes";
 import { Fragment } from "react";
 function App() {
@@ -9,9 +9,15 @@ function App() {
       <Routes>
         {publicRoutes.map((route, index) => {
           let Layout = DefaultLayout;
+          console.log(route.layout);
           if (route.layout) {
-            Layout = route.layout;
-          } else if (route.layout === null) {
+            // Layout = DefaultLayout;
+            if (route.layout == "defaultLayout") {
+              Layout = DefaultLayout;
+            } else if (route.layout == "filmLayout") {
+              Layout = FilmLayout;
+            }
+          } else {
             Layout = Fragment;
           }
           const Page = route.component;

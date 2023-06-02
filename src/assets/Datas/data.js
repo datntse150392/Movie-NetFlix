@@ -138,16 +138,17 @@ export const Films = [
   },
   {
     id: 11,
-    title: "Tân phong thần: Na Tra trùng sinh",
-    state: "",
+    title: "Khi muốn khóc, tôi đeo mặt nạ mèo",
+    state: "trending",
     type: "Phim Anime",
-    duration: "1g 50ph",
-    director: "Triệu Tễ",
-    actor: "Dương Thiên Tường, Trương Hách, Tuyên Hiểu Minh, Lí Thi Minh",
-    img: "https://occ-0-325-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWemk5eMuCOKgBlC_o__WoQZAIF-M3rUljVK79eeOuZQ6NiGMc6ENnOMrm3lSP4j8_3Z1BdH4ouwmu1vlGbF-4x4lkXiv2EPISnyH4kLfzay8tRTZhNRKIx9jkNMJMHRpXy9.jpg?r=9b8",
-    trailerURL: "https://www.youtube.com/watch?v=BvOAAM0ZFQM",
+    duration: "1g 45ph",
+    director: "Sato Junichi, Shibayama Tomotaka",
+    actor:
+      "Shida Mirai, Hanae Natsuki, Ogi Hiroaki, Yamadera Koichi, Kotobuki Minako, Chiba Susumu, Kawasumi Ayako, Ohara Sayaka, Namikawa Daisuke",
+    img: "https://occ-0-325-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABf7k8hB1t0CgnKdKeDwOTm-CaU_XbBHLRA-CL6yT5OgbZFReI542I2lrbaIJVCbSA69D1EV4FYW4P61m0qU4DnJofawQbBl82B7q-9x1D3VEmQLOlnztzVnizR1TFC-0Y2L3.jpg?r=680",
+    trailerURL: "https://www.youtube.com/watch?v=aXc9DVfLTGo",
     description:
-      "Trong cuộc sống của một người giao hàng bình thường kiêm tín đồ đua xe, Na Tra chạm trán những kẻ thù cũ và phải tìm lại năng lực của mình để bảo vệ những người thân yêu.",
+      "Một cô gái kỳ lạ biến thành mèo để thu hút sự chú ý của người cô thầm thích. Nhưng ranh giới giữa người và động vật bắt đầu bị xóa nhòa trước khi cô kịp nhận ra điều đó.",
   },
   {
     id: 12,

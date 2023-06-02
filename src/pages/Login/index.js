@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { images } from "../../images";
+import { images } from "../../assets/images";
 
 export default function Login() {
   const [show, setShow] = useState("false");
